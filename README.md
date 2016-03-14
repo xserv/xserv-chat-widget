@@ -1,6 +1,6 @@
 # xserv-chat-widget
 
-## Include dependecies.
+## Include dependecies
 
 ```html
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 <script src="assets/js/widget.js"></script>
 ```
 
-## Init widget with you app_id, a topic.
+## Init widget with you app_id, a topic
 
 ```html
 <script>
