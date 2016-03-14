@@ -20,8 +20,8 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://mobile-italia.com/xserv/xserv.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="https://mobile-italia.com/xserv/xserv.min.js"></script>
 <script src="assets/js/widget.js"></script>
 ```
 
