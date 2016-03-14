@@ -4,6 +4,11 @@
 
 <br>
 
+This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xserv/) text and video/audio messaging on your site.<br>
+[Xserv](http://mobile-italia.com/xserv/) is a platform of real-time bi-directional messaging via WebSockets to web and mobile apps, or any other Internet connected device.
+
+## How To Get Started
+
 ## Include dependecies
 
 ```html
