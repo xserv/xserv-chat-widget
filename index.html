@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xserv Widget Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://mobile-italia.com/xserv/xserv.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/widget.js"></script>
+    <script>
+  	  	$().ready(function() {
+			var widget1 = new XservChatWidget("C3eBY-1", "my_topic", "widget");
+			// var widget2 = new XservChatWidget("C3eBY-1", "my_topic", "widget2");
+		});
+    </script>
+  </head>
+  <body>
+  	<div id="widget"></div>
+  </body>
+</html>

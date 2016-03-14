@@ -1,0 +1,34 @@
+/* widget */
+
+.widget-size {
+    margin: 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.widget-wrap {
+	margin-bottom: 4px;
+}
+
+iframe {
+	overflow: hidden;
+    width: 100%;
+    height: 320px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.widget-content {
+	overflow-y: scroll;
+	height: 200px;
+	padding: 8px;
+    margin-bottom: 8px;
+	border: 1px solid #ddd;
+	border-radius: 0px 4px 4px 4px;
+}
+
+.widget-content-row {
+	height: 24px;
+}
