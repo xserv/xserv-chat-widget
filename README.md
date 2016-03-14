@@ -39,7 +39,7 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
-#Screnshot
+##Screnshot
 
 An example of use on our site
 
