@@ -22,4 +22,4 @@
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
-![](README/screenshot.png)
+![](screenshot.png)
