@@ -2,7 +2,7 @@
 
 .widget-toggle {
     z-index: 9999999999999;
-    position: absolute;
+    position: fixed;
     bottom: 16px;
     right: 16px;
     width: 64px;
@@ -31,7 +31,7 @@
 	opacity: 0;
 	background-color: #fff;
 	width: 427px;
-	position: absolute;
+	position: fixed;
 	bottom: 100px;
     right: 16px;
     margin: 0;
