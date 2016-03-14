@@ -24,4 +24,6 @@
 
 #Screnshot
 
+An example on our site.
+
 ![](screenshot.png)
