@@ -13,7 +13,7 @@
 ```html
 <script>
   $().ready(function() {
-    var widget = new XservChatWidget("C3eBY-1", "my_topic", "widget", "widget-toggle");
+    var widget = new XservChatWidget("my_app_id", "my_topic", "widget", "widget-toggle");
 	});
 </script>
 ...
