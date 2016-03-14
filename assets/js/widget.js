@@ -19,11 +19,12 @@
 	
 	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id, welcome) {
 	    var open = false;
-	    var widget = $("#" + widget_id);
-	    var widget_toggle = $("#" + widget_toggle_id);
+	    var widget = $('#' + widget_id);
+	    var widget_toggle = $('#' + widget_toggle_id);
 	    
-	    widget.addClass("widget-size");
-	    widget_toggle.addClass("widget-toggle");
+	    widget.addClass('widget-size');
+	    widget_toggle.addClass('widget-toggle');
+	    widget_toggle.append('<div class="img"></div>');
 	    
 	    widget_toggle.click(function() {
 		if (!widget.children().length > 0) {
