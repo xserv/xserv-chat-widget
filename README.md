@@ -12,6 +12,8 @@
 <script src="assets/js/widget.js"></script>
 ```
 
+## Init widget with you app_id, a topic.
+
 ```html
 <script>
   $().ready(function() {
