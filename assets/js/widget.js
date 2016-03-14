@@ -17,7 +17,7 @@
     
     (function () {
 	
-	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id) {
+	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id, welcome) {
 		var open = false;
 		
 		$("#" + widget_id).addClass("widget-size");
@@ -40,8 +40,12 @@
 
 		xserv.addEventListener("receive_ops_response", function(json) {
 			if (json.op == Xserv.OP_SUBSCRIBE && json.rc == Xserv.RC_OK) {
+			    var row_welcome = '';
+			    if (welcome) {
+					row_welcome = "<div class='widget-content-row'><strong>" + welcome + "</strong></div>";
+			    }
             	$("#" + widget_id).html('<div class="widget-wrap"><iframe scrolling="no" src="https://mobile-italia.com:8000/?app_id=' + app_id + '&room=' + json.topic + '"></iframe></div>' +
-            		'<div class="widget-content"></div>' +
+					'<div class="widget-content">' + row_welcome + '</div>' +
             		'<div class="input-group">' +
 	    			'<input id="message" type="text" class="form-control" placeholder="Message">' +
 	    			'<span class="input-group-btn">' +
