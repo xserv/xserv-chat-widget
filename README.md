@@ -1,5 +1,7 @@
 # xserv-chat-widget
 
+## Include dependecies.
+
 ```html
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/widget.css">
