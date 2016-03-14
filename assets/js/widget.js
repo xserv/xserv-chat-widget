@@ -17,9 +17,25 @@
     
     (function () {
 	
-	function XservChatWidget(app_id, topic, widget_id) {
+	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id) {
+		var open = false;
+		
 		$("#" + widget_id).addClass("widget-size");
-
+		$("#" + widget_toggle_id).addClass("widget-toggle");
+		$("#" + widget_toggle_id).click(function() {
+			if (!$("#" + widget_id).children().length > 0) {
+				if (!open) {
+					$("#" + widget_toggle_id).attr('class', 'widget-toggle widget-toggle-off');
+					xserv.subscribe(topic);
+				}
+			} else {
+				if (open) {
+					$("#" + widget_toggle_id).attr('class', 'widget-toggle');
+					xserv.unsubscribe(topic);
+				}
+			}
+		});
+		
 	    var xserv = new Xserv(app_id);
 
 		xserv.addEventListener("receive_ops_response", function(json) {
@@ -44,8 +60,15 @@
         				$("#publish").click();
     				}
 				});
+				
+				$("#" + widget_id).animate({opacity: 1}, 500, function() {
+    				open = true;
+  				});
             } else if (json.op == Xserv.OP_UNSUBSCRIBE && json.rc == Xserv.RC_OK) {
-            	$("#" + widget_id).html('');
+            	$("#" + widget_id).animate({opacity: 0}, 500, function() {
+    				$("#" + widget_id).html('');
+    				open = false;
+  				});
             }
 		});
 
@@ -56,7 +79,7 @@
 		});
 
 		xserv.addEventListener("open_connection", function() {
-			xserv.subscribe(topic);
+			
 		});
 
 		xserv.connect();
