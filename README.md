@@ -9,6 +9,8 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 
 ## How To Get Started
 
+- [Download xserv-chat-widget](https://github.com/xserv/xserv-chat-widget/archive/master.zip) and try out the included JavaScript example apps.
+
 ## Include dependecies
 
 ```html
