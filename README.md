@@ -37,7 +37,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <script src="assets/js/widget.js"></script>
 ```
 
-### Init widget with you app_id, a topic
+### Init widget with you app_id and topic
 
 ```html
 <script>
