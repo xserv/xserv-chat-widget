@@ -21,10 +21,11 @@
 	    var open = false;
 	    var widget = $('#' + widget_id);
 	    var widget_toggle = $('#' + widget_toggle_id);
+	    widget_toggle.hide();
 	    
 	    widget.addClass('widget-size');
 	    widget_toggle.addClass('widget-toggle');
-	    widget_toggle.append('<div class="img"></div>');
+	    widget_toggle.append("<div class='img'></div>");
 	    
 	    widget_toggle.click(function() {
 		if (!widget.children().length > 0) {
@@ -88,7 +89,7 @@
 	    });
 	    
 	    xserv.addEventListener("open_connection", function() {
-		
+		widget_toggle.show();
 	    });
 	    
 	    xserv.connect();
