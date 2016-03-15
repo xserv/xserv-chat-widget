@@ -29,10 +29,10 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 
 ```html
 <script>
-    $().ready(function() {
-        var widget = new XservChatWidget("9Pf80-3", "widget_topic", "widget", "widget-toggle", "");
-        // last arg is a welcome message
-      });
+  $().ready(function() {
+    var widget = new XservChatWidget("9Pf80-3", "widget_topic", "widget", "widget-toggle", "");
+    // last arg is a welcome message
+  });
 </script>
 
 ...
