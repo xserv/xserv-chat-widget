@@ -9,9 +9,9 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 
 ## Live Demo
 
-https://mobile-italia.com/xserv/try/widget/index.html
+Float Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
 
-https://mobile-italia.com/xserv/try/widget/index-full.html
+Multi-client Widget https://mobile-italia.com/xserv/try/widget/index-full.html
 
 ## How To Get Started
 
@@ -64,7 +64,11 @@ https://mobile-italia.com/xserv/dashboard/signup
 
 An example of use on our site.
 
-Live demo on https://mobile-italia.com/xserv/try/widget/index.html
+Live demo
+
+Float Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
+
+Multi-client Widget https://mobile-italia.com/xserv/try/widget/index-full.html
 
 ![](screenshot.png)
 
