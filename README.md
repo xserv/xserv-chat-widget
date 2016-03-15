@@ -9,7 +9,7 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 
 ## Live Demo
 
-Float Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
+Floating Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
 
 Multi-client Widget https://mobile-italia.com/xserv/try/widget/index-full.html
 
@@ -66,7 +66,7 @@ An example of use on our site.
 
 Live demo
 
-Float Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
+Floating Widget with toggle button https://mobile-italia.com/xserv/try/widget/index.html
 
 Multi-client Widget https://mobile-italia.com/xserv/try/widget/index-full.html
 
