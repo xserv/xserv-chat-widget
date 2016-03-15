@@ -17,6 +17,12 @@ https://mobile-italia.com/xserv/try/widget/index.html
 
 ##Installation
 
+## Sign Up on Xserv
+
+You need sign up on Xserv to get you app_id on dashboard.
+
+https://mobile-italia.com/xserv/dashboard/signup
+
 ### Include dependecies
 
 ```html
@@ -34,7 +40,8 @@ https://mobile-italia.com/xserv/try/widget/index.html
 ```html
 <script>
   $().ready(function() {
-    var widget = new XservChatWidget("9Pf80-3", "widget_topic", "widget", "widget-toggle", "");
+    var widget = new XservChatWidget(<app_id>, "widget_topic", "widget", "widget-toggle", "");
+    // app_id is on Xserv dashboard. You need sign up on https://mobile-italia.com/xserv/dashboard/signup
     // last arg is a welcome message
   });
 </script>
