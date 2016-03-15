@@ -19,27 +19,33 @@
 	
 	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id, welcome) {
 	    var open = false;
+	    
 	    var widget = $('#' + widget_id);
-	    var widget_toggle = $('#' + widget_toggle_id);
-	    widget_toggle.hide();
+	    
+	    var widget_toggle = null;
+	    if (widget_toggle_id) {
+		widget_toggle = $('#' + widget_toggle_id);
+		widget_toggle.hide();
+		
+		widget_toggle.addClass('widget-toggle');
+		widget_toggle.append("<div class='img'></div>");
+		
+		widget_toggle.click(function() {
+		    if (!widget.children().length > 0) {
+			if (!open) {
+			    widget_toggle.attr('class', 'widget-toggle widget-toggle-off');
+			    xserv.subscribe(topic);
+			}
+		    } else {
+			if (open) {
+			    widget_toggle.attr('class', 'widget-toggle');
+			    xserv.unsubscribe(topic);
+			}
+		    }
+		});
+	    }
 	    
 	    widget.addClass('widget-size');
-	    widget_toggle.addClass('widget-toggle');
-	    widget_toggle.append("<div class='img'></div>");
-	    
-	    widget_toggle.click(function() {
-		if (!widget.children().length > 0) {
-		    if (!open) {
-			widget_toggle.attr('class', 'widget-toggle widget-toggle-off');
-			xserv.subscribe(topic);
-		    }
-		} else {
-		    if (open) {
-			widget_toggle.attr('class', 'widget-toggle');
-			xserv.unsubscribe(topic);
-		    }
-		}
-	    });
 	    
 	    var xserv = new Xserv(app_id);
 	    
@@ -89,7 +95,11 @@
 	    });
 	    
 	    xserv.addEventListener("open_connection", function() {
-		widget_toggle.show();
+		if (widget_toggle) {
+		    widget_toggle.show();
+		} else {
+		    xserv.subscribe(topic);
+		}
 	    });
 	    
 	    xserv.connect();
