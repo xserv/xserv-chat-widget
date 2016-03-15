@@ -56,7 +56,8 @@ https://mobile-italia.com/xserv/dashboard/signup
 
 ##Screnshot
 
-An example of use on our site
+An example of use on our site.
+Live demo on https://mobile-italia.com/xserv/try/widget/index.html.
 
 ![](screenshot.png)
 
