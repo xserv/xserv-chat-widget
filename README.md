@@ -41,9 +41,11 @@ https://mobile-italia.com/xserv/dashboard/signup
 ```html
 <script>
   $().ready(function() {
-    var widget = new XservChatWidget(<app_id>, "widget_topic", "widget", "widget-toggle", "");
-    // app_id is an identifier of your application, You can found it on Xserv dashboard.
+    var widget = new XservChatWidget(<app_id>, <topic>, "widget", "widget-toggle", "");
+    // 'app_id' is an identifier of your application, You can found it on Xserv dashboard.
     // You need sign up on https://mobile-italia.com/xserv/dashboard/signup
+    
+    // 'topic' is the argument of discussion
     
     // last arg is a welcome message
   });
