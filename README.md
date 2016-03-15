@@ -17,7 +17,7 @@ https://mobile-italia.com/xserv/try/widget/index.html
 
 ##Installation
 
-## Sign Up on Xserv
+### Sign Up on Xserv
 
 You need sign up on Xserv to get you app_id on dashboard.
 
