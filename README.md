@@ -4,7 +4,7 @@
 
 <br>
 
-This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xserv/) WebSocket API for text and video/audio messaging on your site.<br>
+This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xserv/) WebSocket API for text and video/audio messaging on your site (integration with WebRTC).<br>
 [Xserv](http://mobile-italia.com/xserv/) is a platform of real-time bi-directional messaging via WebSockets to web and mobile apps, or any other Internet connected device.
 
 ## Live Demo
@@ -20,6 +20,7 @@ https://mobile-italia.com/xserv/try/widget/index.html
 ### Sign Up on Xserv
 
 You need sign up on Xserv to get your `app_id` on Xserv Dashboard.
+
 That is an identifier of your application.
 
 https://mobile-italia.com/xserv/dashboard/signup
@@ -36,7 +37,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <script src="assets/js/widget.js"></script>
 ```
 
-### Init widget with you app_id, a topic
+### Init widget with you app_id and topic
 
 ```html
 <script>
@@ -60,6 +61,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 ##Screnshot
 
 An example of use on our site.
+
 Live demo on https://mobile-italia.com/xserv/try/widget/index.html
 
 ![](screenshot.png)
