@@ -41,7 +41,9 @@ https://mobile-italia.com/xserv/dashboard/signup
 <script>
   $().ready(function() {
     var widget = new XservChatWidget(<app_id>, "widget_topic", "widget", "widget-toggle", "");
-    // app_id is on Xserv dashboard. You need sign up on https://mobile-italia.com/xserv/dashboard/signup
+    // app_id is your application identifier, you can found it on Xserv dashboard.
+    // You need sign up on https://mobile-italia.com/xserv/dashboard/signup
+    
     // last arg is a welcome message
   });
 </script>
