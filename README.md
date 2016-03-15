@@ -10,6 +10,7 @@ This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xs
 ## Live Demo
 
 https://mobile-italia.com/xserv/try/widget/index.html
+https://mobile-italia.com/xserv/try/widget/index-full.html
 
 ## How To Get Started
 
