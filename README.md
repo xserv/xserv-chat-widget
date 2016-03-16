@@ -21,9 +21,7 @@ Multi-Client Widget https://mobile-italia.com/xserv/try/widget/index-full.html
 
 ### Sign Up on Xserv
 
-You need sign up on Xserv to get your `app_id` on Xserv Dashboard.
-
-That is an identifier of your application.
+You need sign up on Xserv to get your `app_id` on Xserv Dashboard. That is an identifier of your application.
 
 https://mobile-italia.com/xserv/dashboard/signup
 
