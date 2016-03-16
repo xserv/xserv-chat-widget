@@ -53,6 +53,7 @@
 	    widget.addClass('widget-size');
 	    
 	    var xserv = new Xserv(app_id);
+	    this.xserv = xserv;
 	    
 	    xserv.addEventListener("receive_ops_response", function(json) {
 		if (json.op == Xserv.OP_SUBSCRIBE && json.rc == Xserv.RC_OK) {
@@ -148,6 +149,10 @@
 	    } else if (name == 'receive_messages') {
 		this.receive_messages = callback;
 	    }
+	};
+	
+	prototype.getXserv = function() {
+	    return this.xserv;
 	};
 	
 	this.XservChatWidget = XservChatWidget;
