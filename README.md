@@ -83,7 +83,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 For private topic do you need replace a topic string with a JSON like:
 
 ```javascript
-{topic: "@example_name", user: "", pass: ""}
+{topic: "@example_name", user: "user", pass: "pass"}
 ```
 
 ### Manage Widget toggle/connection events
