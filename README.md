@@ -60,6 +60,22 @@ https://mobile-italia.com/xserv/dashboard/signup
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
+### Manage events
+
+```html
+widget.addEventListener("open_connection", function() {
+  ...
+});
+
+widget.addEventListener("close_connection", function(event) {
+  ...
+});
+
+widget.addEventListener("error_connection", function(event) {
+  ...
+});
+```
+
 ##Screnshot
 
 An example of use on our site.
