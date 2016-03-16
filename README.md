@@ -60,19 +60,27 @@ https://mobile-italia.com/xserv/dashboard/signup
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
-### Manage events
+### Manage Xserv events
 
 ```html
 widget.addEventListener("open_connection", function() {
-  ...
+  
 });
 
 widget.addEventListener("close_connection", function(event) {
-  ...
+  
 });
 
 widget.addEventListener("error_connection", function(event) {
-  ...
+  
+});
+
+widget.addEventListener("receive_ops_response", function(event) {
+  
+});
+
+widget.addEventListener("receive_messages", function(event) {
+  
 });
 ```
 
