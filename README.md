@@ -37,7 +37,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <script src="assets/js/widget.js"></script>
 ```
 
-### Init 1. floating chat widget with toogle button
+### Init 1. small floating widget (with toogle button)
 
 ```html
 <script>
@@ -58,7 +58,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
-### Init 2. large chat widget (no floating no toggle button)
+### Init 2. multi-client widget (large, no floating, no toggle button)
 
 ```html
 <script>
