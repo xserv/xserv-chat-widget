@@ -74,7 +74,7 @@ widget.addEventListener("widget_close", function(json) {
 
 ### Extra
 
-#### if you want Xserv connector events
+If you want Xserv connector events.
 
 ```javascript
 widget.addEventListener("open_connection", function() {
@@ -98,7 +98,7 @@ widget.addEventListener("receive_messages", function(json) {
 });
 ```
 
-####  if you want send Xserv WebSocket API command
+If you want send a WebSocket API command to Xserv connector.
 
 ```javascript
 var xserv = widget.xserv; // widget.getXserv();
