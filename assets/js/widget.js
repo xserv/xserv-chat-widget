@@ -56,7 +56,7 @@
 	    this.xserv = xserv;
 	    
 	    xserv.addEventListener("receive_ops_response", function(json) {
-		if (json.op == Xserv.OP_SUBSCRIBE && json.rc == Xserv.RC_OK) {
+		if (json.op == Xserv.OP_SUBSCRIBE && json.rc == Xserv.RC_OK && json.topic == topic.topic) {
 		    var row_welcome = '';
 		    if (welcome) {
 			row_welcome = "<div class='widget-content-row'><strong>" + welcome + "</strong></div>";
@@ -86,7 +86,7 @@
 		    widget.animate({opacity: 1}, 500, function() {
     			open = true;
   		    });
-		} else if (json.op == Xserv.OP_UNSUBSCRIBE && json.rc == Xserv.RC_OK) {
+		} else if (json.op == Xserv.OP_UNSUBSCRIBE && json.rc == Xserv.RC_OK && json.topic == topic.topic) {
             	    widget.animate({opacity: 0}, 500, function() {
     			widget.html('');
     			open = false;
@@ -99,9 +99,11 @@
 	    }.bind(this));
 	    
 	    xserv.addEventListener("receive_messages", function(json) {
-		var prefix = json.socket_id == xserv.getSocketId() ? "You: " : xserv.getSocketId() + ": "
-		var html = "<div class='widget-content-row'><strong>" + prefix + "</strong>" + json.data + "</div>";
-		$(html).hide().prependTo(".widget-content").fadeIn(1000);
+		if (json.topic == topic.topic) {
+		    var prefix = json.socket_id == xserv.getSocketId() ? "You: " : xserv.getSocketId() + ": "
+		    var html = "<div class='widget-content-row'><strong>" + prefix + "</strong>" + json.data + "</div>";
+		    $(html).hide().prependTo(".widget-content").fadeIn(1000);
+		}
 		
 		if (this.receive_messages) {
 		    this.receive_messages(json);
