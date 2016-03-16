@@ -96,6 +96,17 @@ widget.addEventListener("receive_messages", function(json) {
 });
 ```
 
+### Get Xserv connector to use WebSocket API command
+
+```javascript
+var xserv = widget.xserv; // widget.getXserv();
+// some ex.
+xserv.subscribe(topic);
+xserv.unsubscribe(topic);
+xserv.users(topic);
+...
+```
+
 ##Screnshot
 
 An example of use on our site.
