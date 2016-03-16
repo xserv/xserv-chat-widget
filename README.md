@@ -63,11 +63,11 @@ https://mobile-italia.com/xserv/dashboard/signup
 ### Manage Widget events
 
 ```html
-widget.addEventListener("widget_open", function() {
+widget.addEventListener("widget_open", function(json) {
   
 });
 
-widget.addEventListener("widget_close", function(event) {
+widget.addEventListener("widget_close", function(json) {
   
 });
 ```
