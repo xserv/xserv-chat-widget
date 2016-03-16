@@ -86,11 +86,19 @@
 		    widget.animate({opacity: 1}, 500, function() {
     			open = true;
   		    });
+		    
+		    if (widget_open) {
+			widget_open(json);
+		    }
 		} else if (json.op == Xserv.OP_UNSUBSCRIBE && json.rc == Xserv.RC_OK && json.topic == topic.topic) {
             	    widget.animate({opacity: 0}, 500, function() {
     			widget.html('');
     			open = false;
   		    });
+		    
+		    if (widget_close) {
+			widget_close(close);
+		    }
 		}
 		
 		if (this.receive_ops_response) {
@@ -150,6 +158,10 @@
 		this.receive_ops_response = callback;
 	    } else if (name == 'receive_messages') {
 		this.receive_messages = callback;
+	    } else if (name == 'widget_open') {
+		this.widget_open = callback;
+	    } else if (name == 'widget_close') {
+		this.widget_close = callback;
 	    }
 	};
 	
