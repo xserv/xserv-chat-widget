@@ -82,7 +82,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 
 For private topic do you need replace a topic string with a JSON like:
 
-```json
+```javascript
 {topic: "@example_name", user: "", pass: ""}
 ```
 
