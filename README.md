@@ -96,7 +96,7 @@ widget.addEventListener("receive_messages", function(json) {
 });
 ```
 
-### Extra: if you want send Xserv connector WebSocket API command
+### Extra: if you want send Xserv WebSocket API command
 
 ```javascript
 var xserv = widget.xserv; // widget.getXserv();
