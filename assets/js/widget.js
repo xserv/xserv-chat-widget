@@ -87,8 +87,8 @@
     			open = true;
   		    });
 		    
-		    if (widget_open) {
-			widget_open(json);
+		    if (this.widget_open) {
+			this.widget_open(json);
 		    }
 		} else if (json.op == Xserv.OP_UNSUBSCRIBE && json.rc == Xserv.RC_OK && json.topic == topic.topic) {
             	    widget.animate({opacity: 0}, 500, function() {
@@ -96,8 +96,8 @@
     			open = false;
   		    });
 		    
-		    if (widget_close) {
-			widget_close(close);
+		    if (this.widget_close) {
+			this.widget_close(close);
 		    }
 		}
 		
