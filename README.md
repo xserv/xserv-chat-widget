@@ -62,7 +62,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 
 ### Manage Widget events
 
-```html
+```javascript
 widget.addEventListener("widget_open", function(json) {
   
 });
@@ -74,7 +74,7 @@ widget.addEventListener("widget_close", function(json) {
 
 ### Manage Xserv events
 
-```html
+```javascript
 widget.addEventListener("open_connection", function() {
   
 });
