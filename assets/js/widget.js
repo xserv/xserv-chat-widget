@@ -18,6 +18,11 @@
     (function () {
 	
 	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id, welcome) {
+	    if (typeof topic === 'string' || topic instanceof String) {
+		topic = {topic: topic, auth: {params: {user: "", pass: ""}}};
+	    } else {
+		topic = {topic: topic.topic, auth: {params: {user: topic.user, pass: topic.pass}}};
+	    }
 	    var open = false;
 	    
 	    var widget = $('#' + widget_id);
@@ -34,12 +39,12 @@
 		    if (!widget.children().length > 0) {
 			if (!open) {
 			    widget_toggle.attr('class', 'widget-toggle widget-toggle-off');
-			    xserv.subscribe(topic);
+			    xserv.subscribe(topic.topic, topic.auth);
 			}
 		    } else {
 			if (open) {
 			    widget_toggle.attr('class', 'widget-toggle');
-			    xserv.unsubscribe(topic);
+			    xserv.unsubscribe(topic.topic);
 			}
 		    }
 		});
@@ -57,7 +62,7 @@
 		    }
             	    widget.html('<div class="widget-wrap">' +
 				'<iframe scrolling="no" src="https://mobile-italia.com:8000/?app_id=' +
-				app_id + '&room=' + json.topic + '"></iframe></div>' +
+				app_id + '&room=' + json.topic.replace("@", "priv_") + '"></iframe></div>' + 
 				'<div class="widget-content">' + row_welcome + '</div>' +
             			'<div class="input-group">' +
 	    			'<input id="message" type="text" class="form-control" placeholder="Message">' +
@@ -66,7 +71,7 @@
 	    			'</span></div>');
 	  	    
 	  	    $("#publish").click(function() {
-           		xserv.publish(topic, $("#message").val());
+           		xserv.publish(topic.topic, $("#message").val());
            		$("#message").val("");
            		$("#message").focus();
         	    });
@@ -98,7 +103,7 @@
 		if (widget_toggle) {
 		    widget_toggle.show();
 		} else {
-		    xserv.subscribe(topic);
+		    xserv.subscribe(topic.topic, topic.auth);
 		}
 	    });
 	    
