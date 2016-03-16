@@ -91,13 +91,21 @@
     			open = false;
   		    });
 		}
-	    });
+		
+		if (this.receive_ops_response) {
+		    this.receive_ops_response(json);
+		}
+	    }.bind(this));
 	    
 	    xserv.addEventListener("receive_messages", function(json) {
 		var prefix = json.socket_id == xserv.getSocketId() ? "You: " : xserv.getSocketId() + ": "
 		var html = "<div class='widget-content-row'><strong>" + prefix + "</strong>" + json.data + "</div>";
 		$(html).hide().prependTo(".widget-content").fadeIn(1000);
-	    });
+		
+		if (this.receive_messages) {
+		    this.receive_messages(json);
+		}
+	    }.bind(this));
 	    
 	    xserv.addEventListener("open_connection", function() {
 		if (widget_toggle) {
@@ -105,12 +113,42 @@
 		} else {
 		    xserv.subscribe(topic.topic, topic.auth);
 		}
-	    });
+		
+		if (this.open_connection) {
+		    this.open_connection();
+		}
+	    }.bind(this));
+	    
+	    xserv.addEventListener("close_connection", function(event) {
+		if (this.close_connection) {
+		    this.close_connection(event);
+		}
+	    }.bind(this));
+	    
+	    xserv.addEventListener("error_connection", function(event) {
+		if (this.error_connection) {
+		    this.error_connection(event);
+		}
+	    }.bind(this));
 	    
 	    xserv.connect();
 	}
 	
 	var prototype = XservChatWidget.prototype;
+	
+	prototype.addEventListener = function(name, callback) {
+	    if (name == 'open_connection') {
+		this.open_connection = callback;
+	    } else if (name == 'close_connection') {
+		this.close_connection = callback;
+	    } else if (name == 'error_connection') {
+		this.error_connection = callback;
+	    } else if (name == 'receive_ops_response') {
+		this.receive_ops_response = callback;
+	    } else if (name == 'receive_messages') {
+		this.receive_messages = callback;
+	    }
+	};
 	
 	this.XservChatWidget = XservChatWidget;
 	
