@@ -60,7 +60,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <div id="widget-toggle"><div class="img"></div></div>
 ```
 
-### Manage Widget events
+### Manage Widget toggle events
 
 ```javascript
 widget.addEventListener("widget_open", function(json) {
@@ -72,7 +72,7 @@ widget.addEventListener("widget_close", function(json) {
 });
 ```
 
-### Manage Xserv events
+### Extra: if you want Xserv connector events
 
 ```javascript
 widget.addEventListener("open_connection", function() {
@@ -96,7 +96,7 @@ widget.addEventListener("receive_messages", function(json) {
 });
 ```
 
-### Get Xserv connector to use WebSocket API command
+### Extra: if you want send Xserv connector WebSocket API command
 
 ```javascript
 var xserv = widget.xserv; // widget.getXserv();
