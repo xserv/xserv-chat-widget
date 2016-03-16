@@ -78,7 +78,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <div id="widget"></div>
 ```
 
-### Manage Widget toggle events
+### Manage Widget toggle/connection events
 
 ```javascript
 widget.addEventListener("widget_open", function(json) {
