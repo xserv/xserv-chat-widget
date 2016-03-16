@@ -55,7 +55,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 ...
 
 <div id="widget"></div>
-<div id="widget-toggle"><div class="img"></div></div>
+<div id="widget-toggle"></div>
 ```
 
 ### Init 2. multi-client widget (large, no floating, no toggle button)
