@@ -39,7 +39,7 @@ https://mobile-italia.com/xserv/dashboard/signup
 <script src="assets/js/widget.js"></script>
 ```
 
-### Init widget with you app_id and topic
+### Init 1. floating chat widget with toogle button
 
 ```html
 <script>
@@ -58,6 +58,26 @@ https://mobile-italia.com/xserv/dashboard/signup
 
 <div id="widget"></div>
 <div id="widget-toggle"><div class="img"></div></div>
+```
+
+### Init 2. large chat widget (no floating no toggle button)
+
+```html
+<script>
+  $().ready(function() {
+    var widget = new XservChatWidget(<app_id>, <topic>, "widget", null, "");
+    // 'app_id' is an identifier of your application, You can found it on Xserv dashboard.
+    // You need sign up on https://mobile-italia.com/xserv/dashboard/signup
+    
+    // 'topic' is the argument of discussion
+    
+    // last arg is a welcome message
+  });
+</script>
+
+...
+
+<div id="widget"></div>
 ```
 
 ### Manage Widget toggle events
