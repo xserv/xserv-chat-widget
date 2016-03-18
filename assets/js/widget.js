@@ -61,12 +61,11 @@
 		    if (welcome) {
 			row_welcome = "<div class='widget-content-row'><strong>" + welcome + "</strong></div>";
 		    }
-            	    widget.html('<div class="widget-wrap">' +
-				'<iframe scrolling="no" src="https://mobile-italia.com:8000/?app_id=' +
+            	    widget.html('<div class="widget-wrap"><iframe scrolling="no" src="https://' + Xserv.HOST + ':8000/?app_id=' +
 				app_id + '&room=' + json.topic.replace("@", "priv_") + '"></iframe></div>' + 
 				'<div class="widget-content">' + row_welcome + '</div>' +
-            			'<div class="input-group">' +
-	    			'<input id="message" type="text" class="form-control" placeholder="Message">' +
+            			'<div class="input-group">' + 
+				'<input id="message" type="text" class="form-control" placeholder="Message">' +
 	    			'<span class="input-group-btn">' +
 	      			'<button id="publish" class="btn btn-default" type="button">Send</button>' +
 	    			'</span></div>');
