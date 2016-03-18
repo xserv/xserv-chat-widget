@@ -103,23 +103,23 @@ widget.addEventListener("widget_close", function(json) {
 If you want Xserv connector events.
 
 ```javascript
-widget.addEventListener("open_connection", function() {
+widget.addEventListener("connection_open", function() {
   
 });
 
-widget.addEventListener("close_connection", function(event) {
+widget.addEventListener("connection_close", function(event) {
   
 });
 
-widget.addEventListener("error_connection", function(event) {
+widget.addEventListener("connection_error", function(event) {
   
 });
 
-widget.addEventListener("receive_ops_response", function(json) {
+widget.addEventListener("operations", function(json) {
   
 });
 
-widget.addEventListener("receive_messages", function(json) {
+widget.addEventListener("messages", function(json) {
   
 });
 ```
