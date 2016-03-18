@@ -19,7 +19,7 @@
 	
 	function XservChatWidget(app_id, topic, widget_id, widget_toggle_id, welcome) {
 	    if (typeof topic === 'string' || topic instanceof String) {
-		topic = {topic: topic, auth: {params: {user: "", pass: ""}}};
+		topic = {topic: topic, auth: {params: {user: '', pass: ''}}};
 	    } else {
 		topic = {topic: topic.topic, auth: {params: {user: topic.user, pass: topic.pass}}};
 	    }
@@ -55,7 +55,7 @@
 	    var xserv = new Xserv(app_id);
 	    this.xserv = xserv;
 	    
-	    xserv.addEventListener("receive_ops_response", function(json) {
+	    xserv.addEventListener('operations', function(json) {
 		if (json.op == Xserv.OP_SUBSCRIBE && json.rc == Xserv.RC_OK && json.topic == topic.topic) {
 		    var row_welcome = '';
 		    if (welcome) {
@@ -106,7 +106,7 @@
 		}
 	    }.bind(this));
 	    
-	    xserv.addEventListener("receive_messages", function(json) {
+	    xserv.addEventListener('messages', function(json) {
 		if (json.topic == topic.topic) {
 		    var prefix = json.socket_id == xserv.getSocketId() ? "You: " : xserv.getSocketId() + ": "
 		    var html = "<div class='widget-content-row'><strong>" + prefix + "</strong>" + json.data + "</div>";
@@ -118,27 +118,27 @@
 		}
 	    }.bind(this));
 	    
-	    xserv.addEventListener("open_connection", function() {
+	    xserv.addEventListener('connection_open', function() {
 		if (widget_toggle) {
 		    widget_toggle.show();
 		} else {
 		    xserv.subscribe(topic.topic, topic.auth);
 		}
 		
-		if (this.open_connection) {
-		    this.open_connection();
+		if (this.connection_open) {
+		    this.connection_open();
 		}
 	    }.bind(this));
 	    
-	    xserv.addEventListener("close_connection", function(event) {
-		if (this.close_connection) {
-		    this.close_connection(event);
+	    xserv.addEventListener('connection_close', function(event) {
+		if (this.connection_close) {
+		    this.connection_close(event);
 		}
 	    }.bind(this));
 	    
-	    xserv.addEventListener("error_connection", function(event) {
-		if (this.error_connection) {
-		    this.error_connection(event);
+	    xserv.addEventListener('connection_error', function(event) {
+		if (this.connection_error) {
+		    this.connection_error(event);
 		}
 	    }.bind(this));
 	    
@@ -148,15 +148,15 @@
 	var prototype = XservChatWidget.prototype;
 	
 	prototype.addEventListener = function(name, callback) {
-	    if (name == 'open_connection') {
-		this.open_connection = callback;
-	    } else if (name == 'close_connection') {
-		this.close_connection = callback;
-	    } else if (name == 'error_connection') {
-		this.error_connection = callback;
-	    } else if (name == 'receive_ops_response') {
+	    if (name == 'connection_open') {
+		this.connection_open = callback;
+	    } else if (name == 'connection_close') {
+		this.connection_close = callback;
+	    } else if (name == 'connection_error') {
+		this.connection_error = callback;
+	    } else if (name == 'operations') {
 		this.receive_ops_response = callback;
-	    } else if (name == 'receive_messages') {
+	    } else if (name == 'messages') {
 		this.receive_messages = callback;
 	    } else if (name == 'widget_open') {
 		this.widget_open = callback;
