@@ -5,7 +5,7 @@
 <br>
 
 This JavaScript widget allows you easily use [Xserv](http://mobile-italia.com/xserv/) WebSocket API for text and video/audio messaging on your site (integration with WebRTC).<br>
-[Xserv](http://mobile-italia.com/xserv/) provides a complete solution to implement the backend of all your applications that web, mobile, desktop, embedded or otherwise.
+[Xserv](http://mobile-italia.com/xserv/) provides a complete solution to implement the backend of all your applications such as web, mobile, desktop, embedded or otherwise.
 
 ## Live Demo
 
