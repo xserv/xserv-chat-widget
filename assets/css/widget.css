@@ -1,5 +1,13 @@
 /* widget */
 
+h1, h4 {
+    color: #444 !important;
+}
+
+p {
+    color: #777 !important;
+}
+
 .widget-toggle {
     z-index: 9999999999999;
     position: fixed;
