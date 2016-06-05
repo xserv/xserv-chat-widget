@@ -1,10 +1,10 @@
 /* widget */
 
-h1, h4 {
+.example h1, .example h4 {
     color: #444 !important;
 }
 
-p {
+.example p {
     color: #777 !important;
 }
 
